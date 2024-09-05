@@ -241,7 +241,7 @@ function DetailPage() {
         </div>
       </div>
 
-      <p className="btn_view_members" onClick={() => handleViewAllMembers(community)}>전체 멤버 보기 👉🏻</p>
+      <p className="btn_view_members"><span onClick={() => handleViewAllMembers(community)}>전체 멤버 보기 👉🏻</span></p>
 
       <div className="detail-body">
         <div className="detail-boxes">
