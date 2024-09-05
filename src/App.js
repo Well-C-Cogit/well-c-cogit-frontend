@@ -5,6 +5,7 @@ import Communities from "./components/Communities";
 import NavigationBar from "./components/NavigationBar";
 import DetailPage from "./components/DetailPage";
 import ProfilePage from "./components/ProfilePage";
+import AllMemberPage from "./components/AllMemberPage";
 import "./App.css";
 
 function App() {
@@ -20,7 +21,13 @@ function App() {
                 <div>
                   <h2 className="my-profile-title">내 정보</h2>
                   <div className="my-info">
-                    <MyHeader />
+                  <MyHeader
+                    username={'박지수'}
+                    user_id={'Jisu0917'}
+                    user_introduce={'안녕하세요 ;-) 안드로이드 개발자입니다. 주력 언어는 코틀린입니다.'}
+                    profileImage={'/images/example1.jpg'}
+                    hideCommunityCount={false}
+                   />
                     <Communities />
                   </div>
                 </div>
@@ -28,6 +35,7 @@ function App() {
             />
             <Route path="/detail" element={<DetailPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/members" element={<AllMemberPage />} />
           </Routes>
         </div>
       </div>

@@ -1,0 +1,11 @@
+.all-members-page {
+  overflow-y: auto;
+  margin-top: 60px;
+}
+
+.detail-members-title {
+  font-size: 1.0em;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+

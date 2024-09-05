@@ -3,6 +3,12 @@ import "./MembersView.css";
 
 function MembersView() {
 
+const navigate = useNavigate();
+    
+const handleMemberClick = (memberData) => {
+    navigate('/user-detail', { state: { member: memberData } });
+};
+
   return (
     <div className="members-view">
         <h2 className="detail-members-title">👨🏻‍💻 전체 멤버</h2>

@@ -144,8 +144,10 @@ function DetailPage() {
     const { state } = location;
     const community = state ? state.community : {};
 
-    const handleMemberClick = (memberData) => {
-        navigate('/user-detail', { state: { member: memberData } });
+    const handleViewAllMembers = (community) => {
+      navigate('/members', {
+        state: { community }
+      });
     };
 
     let iconSrc;
@@ -169,10 +171,10 @@ function DetailPage() {
 
     // 파이 차트에 사용될 데이터 (예시 데이터)
     const pieChartData = [
-    { name: community.members_name[0], commits: 120 },
-    { name: community.members_name[1], commits: 102 },
-    { name: community.members_name[2], commits: 205 },
-    { name: community.members_name[3], commits: 134 },
+    { name: community.members_name[0], commits: 205 },
+    { name: community.members_name[1], commits: 182 },
+    { name: community.members_name[2], commits: 135 },
+    { name: community.members_name[3], commits: 104 },
     { name: community.members_name[4], commits: 87 },
   ];
 
@@ -239,7 +241,7 @@ function DetailPage() {
         </div>
       </div>
 
-      <p className="btn_view_members">전체 멤버 보기 👉🏻</p>
+      <p className="btn_view_members" onClick={() => handleViewAllMembers(community)}>전체 멤버 보기 👉🏻</p>
 
       <div className="detail-body">
         <div className="detail-boxes">

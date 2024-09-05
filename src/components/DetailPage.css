@@ -210,6 +210,7 @@ body {
     background-clip: padding-box;
     padding: 3px;
     background-color: transparent;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -258,6 +259,7 @@ body {
     font-size: 0.7em;
     font-family: 'Pretendard-Medium', Arial, sans-serif;
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 .detail-body {
