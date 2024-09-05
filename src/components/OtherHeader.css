@@ -1,0 +1,82 @@
+.otherheader {
+    background-color: white;
+    padding: 16px;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 0px 0px 5px 0px;
+}
+
+.otherheader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otherprofile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.otherprofile-image {
+    position: relative;
+    margin-right: 16px;
+}
+
+.otherprofile-image img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #dbdbdb;
+}
+
+.otherprofile-info {
+    text-align: left;
+    width: 250px;
+}
+
+.othercommunity-id {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.othercommunity-stats {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.othercommunity-stats div {
+    font-size: 14px;
+}
+
+.othercommunity-name {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.othercommunity-introduce {
+    font-size: 13px;
+    color: #8e8e8e;
+    width: 250px;
+    margin-top: 3px;
+}
+
+.otherprofile-actions {
+    display: flex;
+    margin-top: 0px;
+}
+
+.otherprofile-actions button {
+    font-family: 'Pretendard-SemiBold', Arial, sans-serif;
+    background-color: transparent;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.otherprofile-actions button:hover {
+    background-color: #eee;
+}

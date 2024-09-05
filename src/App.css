@@ -1,0 +1,66 @@
+.app {
+  font-family: 'Pretendard-Light', "Arial, sans-serif";
+  background-color: #f5f5f5;
+  color: #333;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center;     /* 수평 중앙 정렬 */
+  overflow: hidden; /* 스크롤바 완전히 제거 */
+}
+
+/* 특정 요소에 스크롤을 숨기면서 스크롤 기능 유지 */
+.scrollable-content {
+  width: 100%; /* 고정 너비 */
+  max-width: 768px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* touch-action: pan-y; 수직 방향의 스크롤만 허용, 수평 스크롤 금지 */
+  padding-bottom: 20px;
+  -ms-overflow-style: none;  /* 인터넷 익스플로러 */
+  scrollbar-width: none;      /* 파이어폭스 */
+}
+
+.scrollable-content::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.my-profile-title {
+  margin: 60px 0px 6px 0px;
+  padding: 6px 16px;
+}
+
+.my-info {
+  padding: 5px 0px 15px 0px;
+}
+
+
+/* Pretendard 폰트 정의 */
+@font-face {
+  font-family: 'Pretendard-Light';
+  src: url('../public/fonts/Pretendard-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('../public/fonts/Pretendard-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('../public/fonts/Pretendard-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('../public/fonts/Pretendard-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
