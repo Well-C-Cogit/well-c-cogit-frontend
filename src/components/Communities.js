@@ -303,8 +303,8 @@ function CommunityItem({ name, commits, lastCommit, type, profileImg, members, m
         </div>
   
         <div className="commits">
-          <p>🔥 &nbsp;<strong>{member_count}명</strong>이 활동 중인 모임이에요.</p>
-          <p>✨ <strong>{days}일</strong> 동안 총 커밋 <strong>{commits}회</strong>를 달성했어요!</p>
+          <p>🔥 &nbsp;<b>{member_count}명</b>이 활동 중인 모임이에요.</p>
+          <p>✨ <b>{days}일</b> 동안 총 커밋 <b>{commits}회</b>를 달성했어요!</p>
         </div>
   
         <div className="community-members">
