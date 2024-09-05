@@ -23,6 +23,26 @@ body {
     display: none; /* Chrome, Safari, Opera, Edge */
 }
 
+.detail-header-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    justify-self: center;
+    z-index: 0;
+
+    width: calc(100% - 30px);
+    margin: 5px 15px;
+    padding: 10px 0px 15px 0px;
+    background-color: #ffffffd5;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .detail-header {
     position: relative;
     top: 0;
@@ -30,17 +50,12 @@ body {
     right: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     justify-self: center;
     z-index: 1;
-    padding: 10px 0px 15px 0px;
-    background-color: #ffffffd5;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 5px 15px;
-    border-radius: 10px;
     height: 60px;
-    width: calc(100% - 30px);
+    padding: 0px 20px;
     max-width: 768px;
 }
 
@@ -69,7 +84,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .detail-main-info .detail-score-icon {
@@ -86,11 +101,14 @@ body {
     font-family: 'Pretendard-SemiBold', Arial, sans-serif;
     font-weight: normal;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .detail-sub-info p {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.9em;
     vertical-align: middle;
     display: flex;
     justify-content: space-between;
@@ -130,7 +148,7 @@ body {
     align-items: center;
     z-index: 1;
     padding: 10px 0px 10px 0px;
-    margin: 15px 15px 15px 15px;
+    margin: 0px 15px 15px 15px;
     border-radius: 10px;
     background-color: #ffded27b;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -151,6 +169,89 @@ body {
     vertical-align: middle;
     color: #555;
 }
+
+.detail-primary-members {
+    margin-left: 0;
+    padding: 0px 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    justify-self: center;
+    z-index: 1;
+}
+
+.detail-primary-members-title, .detail-medals-title {
+    font-size: 0.8em;
+    font-family: 'Pretendard-SemiBold', Arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    margin-left: 0px;
+}
+
+
+.detail-primary-members-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 10px;
+    margin-left: 15px;
+    flex-wrap: wrap;
+}
+
+.detail-primary-members-list .detail-primary-profile-icon.detail-primary-member {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(15deg, rgb(231, 96, 177), rgb(253, 234, 109), rgb(178, 152, 255));
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 3px;
+    background-color: transparent;
+}
+
+
+.detail-primary-member-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.detail-primary-member-id {
+    font-family: 'Pretendard-SemiBold', Arial, sans-serif;
+    margin-top: 5px;
+    font-size: 0.5em;
+    color: #777;
+    width: 44px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.detail-medals-title {
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.detail-medals {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0px 5px 0px;
+    padding: 0px 20px;
+}
+
+.detail-medals .detail-score-icon {
+    width: 1.4em;
+    height: 1.4em;
+    vertical-align: middle;
+    margin: 0px 0.2em;
+}
+
 
 .detail-community-members {
     position: relative;
@@ -258,7 +359,7 @@ body {
 .detail-active, .detail-boxes {
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .detail-card {
@@ -268,13 +369,17 @@ body {
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 110px;
 }
 
-.detail-boxes .detail-card {
-    margin-bottom: 0px;
+.detail-card.commits { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.detail-card p, strong {
+.detail-card p, strong, span {
     margin: 5px 0 0 0;
     font-size: 0.8em;
     vertical-align: middle;
@@ -291,8 +396,21 @@ body {
     font-family: 'Pretendard-Medium', Arial, sans-serif;
 }
 
-.detail-grid {
+/* .detail-card .detail-commits {
+    
+} */
+
+.detail-commits .detail-piedata-commits {
+    font-size: 0.9em;
+}
+
+.detail-card .piechart {
+    margin-left: 0px;
+}
+
+/* .detail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-}
+} */
+
