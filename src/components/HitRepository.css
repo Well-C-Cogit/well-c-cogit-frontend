@@ -1,0 +1,75 @@
+.hit-repository {
+    padding: 0;
+    background: transparent;
+    margin-bottom: 30px;
+}
+
+.hit-repository h2 {
+    font-size: 1.0em;
+    font-family: 'Pretendard-SemiBold', Arial, sans-serif;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.repo-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 5px;
+}
+
+.repo-info {
+    display: inline-block;
+}
+
+.repo-author-img {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.repo-author-name {
+    font-size: 0.8em;
+    color: #555;
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.repo-name {
+    font-size: 0.8em;
+    font-family: 'Pretendard-Regular', Arial, sans-serif;
+    flex-grow: 1;
+    margin-right: 10px;
+    width: calc(100% - 120px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.repo-commit-container {
+    display: block;
+}
+
+.repo-commit-icon {
+    vertical-align: middle;
+    width: 0.7em;
+    height: 0.8em;
+    margin-right: 5px;
+}
+
+.repo-commits {
+    vertical-align: middle;
+    font-size: 0.7em;
+    color: #767676;
+}

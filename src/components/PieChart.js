@@ -53,7 +53,7 @@ const PieChart = ({ data }) => {
   }, [data]);
 
   return (
-    <div className='piechart' style={{ position: 'relative', width: '100px', height: '100px' }}>
+    <div className='piechart' style={{ position: 'relative', width: '90px', height: '90px' }}>
       <canvas ref={canvasRef} width="100" height="100" />
     </div>
   );
