@@ -1,0 +1,85 @@
+.commit-history {
+    padding: 0px 0px;
+    background: transparent;
+    margin-bottom: 30px;
+}
+
+.commit-history h2 {
+    font-size: 1.0em;
+    font-family: 'Pretendard-SemiBold', Arial, sans-serif;
+    font-weight: normal;
+}
+  
+.commit-date-block {
+    margin-bottom: 0px;
+}
+  
+.commit-date-block h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    font-size: 0.8em;
+    font-family: 'Pretendard-Medium', Arial, sans-serif;
+    font-weight: normal;
+}
+  
+.commit-entry {
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+.commit-title {
+    font-weight: bold;
+    font-size: 0.8em;
+    font-family: 'Pretendard-Regular', Arial, sans-serif;
+    font-weight: normal;
+    width: calc(100% - 110px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+  
+.commit-author {
+    display: block;
+    width: 60px;
+    padding-top: 2px;
+    margin-right: 5px;
+}
+
+.commit-author-img {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+  
+.commit-author-name {
+    display: inline-block;
+    font-size: 0.8em;
+    color: #555;
+    cursor: pointer;
+    vertical-align: middle;
+    width: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+  
+.commit-time-ago {
+    font-size: 0.7em;
+    vertical-align: bottom;
+    color: #767676;
+    margin-left: auto;
+}
+  

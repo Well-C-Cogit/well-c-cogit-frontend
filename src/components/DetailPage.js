@@ -1,7 +1,54 @@
 import React from "react";
 import { useLocation, useNavigate } from 'react-router-dom';
 import "./DetailPage.css";
+import CommitHistory from './CommitHistory'; 
 import PieChart from './PieChart';
+
+const commits = [
+  // Sample commits data
+  {
+    date: 'Sep 5, 2024',
+    history: [
+      {
+        title: '메인페이지, 디테일페이지 1차 구성',
+        author: {
+          name: '박지수',
+          id: '@Jisu0917',
+          profileImage: '/images/example.png',
+          profileLink: '/user-detail'
+        },
+        timeAgo: '10분 전'
+      },
+      {
+        title: 'PieChart 그리기 & DetailPage 레이아웃 수정',
+        author: {
+          name: '강민희',
+          id: '@minhee02',
+          profileImage: '/images/example3.jpg',
+          profileLink: '/user-detail'
+        },
+        timeAgo: '30분 전'
+      }
+    ]
+  },
+  {
+    date: 'Sep 4, 2024',
+    history: [
+      {
+        title: 'Initial commit',
+        author: {
+          name: '정선교',
+          id: '@tjsry0466',
+          profileImage: '/images/WSCG.png',
+          profileLink: '/user-detail'
+        },
+        timeAgo: '20시간 전'
+      }
+    ]
+  }
+];
+
+
 
 function DetailPage() {
     const location = useLocation();
@@ -77,9 +124,9 @@ function DetailPage() {
             <div key={index} className="detail-primary-member-item">
               <img
                 style={{
-                  zIndex: index,  // z-index 값은 index에 따라 1씩 증가
-                  position: 'relative',  // z-index 작동을 위해 position 설정
-                  marginLeft: `-15px`  // 각 이미지가 겹치도록 왼쪽으로 이동
+                  zIndex: index,
+                  position: 'relative',
+                  marginLeft: `-15px`
                 }}
                 className="detail-primary-profile-icon detail-primary-member"
                 src={process.env.PUBLIC_URL + member}
@@ -106,7 +153,7 @@ function DetailPage() {
 
       </div>
 
-        <div className="detail-body">
+      <div className="detail-body">
         <div className="detail-boxes">
             <h2>🐾 모임 통계</h2>
               <div className="detail-card commits" >
@@ -125,6 +172,7 @@ function DetailPage() {
                 <PieChart data={pieChartData} />
               </div>
               
+              <div className="detail-grid">
               <div className="detail-card">
               <strong>받은 메달</strong>
               <p>
@@ -160,30 +208,23 @@ function DetailPage() {
               <strong>(통계 지표 3)</strong>
               <p>통계... 또는 그래프</p>
               </div>
-              <div className="detail-card">
-              <strong>(통계 지표 4)</strong>
-              <p>통계... 또는 그래프</p>
-              </div>
+            </div>
           </div>
 
+        <div className="detail-commit-history">
+          <CommitHistory commits={commits} />
+        </div>
 
-          <div className="detail-active">
-            <h2>🔔 멤버 활동 내역</h2>
+        <div className="detail-active">
+            <h2>⭐ 조회수 많은 레포</h2>
             <div className="detail-card">
-                <strong>최근 커밋</strong>
-                <p><b>@{community.members_id[2]}</b>님이 <br/> <b>"백준 1971번 문제 풀이"</b> 커밋을 올렸어요!</p>
-                <p><b>@{community.members_id[0]}</b>님이 <br/> <b>"Canopy 테이블 업데이트"</b> 커밋을 올렸어요!</p>
-            </div>
-            <div className="detail-card">
-                <strong>조회수 많은 레포</strong>
                 <p><b>@{community.members_id[1]}</b>님의 <br/> <b>"심전도 그래프 Android 앱"</b> 레포가 인기예요!</p>
                 <p><b>@{community.members_id[3]}</b>님의 <br/> <b>"Piano LED Visulalizer"</b> 레포가 인기예요!</p>
             </div>
-          </div>
-
-          
         </div>
+    </div>
 
+      <h2 className="detail-members-title">👨🏻‍💻 전체 멤버</h2>
         <div className="detail-community-members">
             <div className="detail-members-list">
                 {community.members.map((member, index) => (

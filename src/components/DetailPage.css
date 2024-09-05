@@ -4,7 +4,7 @@ body {
 
 .detail-page {
     margin-top: 60px;
-    padding: 15px;
+    padding: 5px;
     background-color: transparent;
     position: relative; 
 }
@@ -279,11 +279,20 @@ body {
     display: none; /* Chrome, Safari, Opera, Edge */
 }
 
+.detail-members-title {
+    font-size: 1.0em;
+    vertical-align: middle;
+    font-family: 'Pretendard-SemiBold', Arial, sans-serif;
+    font-weight: normal;
+    text-align: left;
+    margin: 0px 15px 10px 15px;
+}
+
 .detail-members-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     justify-self: center;
 }
 
@@ -408,9 +417,17 @@ body {
     margin-left: 0px;
 }
 
-/* .detail-grid {
+.detail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-} */
+}
+
+.detail-grid .detail-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+}
 
