@@ -15,7 +15,7 @@ const commits = [
         author: {
           name: '박지수',
           id: '@Jisu0917',
-          profileImage: '/images/example.png',
+          profileImage: '/images/example.PNG',
           profileLink: '/user-detail'
         },
         timeAgo: '10분 전',
@@ -91,7 +91,7 @@ const repositories = [
     commits: 306,
     author: {
       name: '박지수',
-      profileImage: '/images/example.png',
+      profileImage: '/images/example.PNG',
       profileLink: '/user-detail'
     },
     repoLink: 'https://github.com/Jisu0917/DataStructure_with_Java',

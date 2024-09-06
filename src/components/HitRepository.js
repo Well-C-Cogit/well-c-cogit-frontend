@@ -35,7 +35,7 @@ const HitRepository = ({ repositories }) => {
                 >|&nbsp;&nbsp;{repo.name}</span>
             </div>
             <div className='repo-commit-container'>
-                <img src="/images/ic_commit.png" alt="commit-icon" className="repo-commit-icon" />
+                <img src="/images/ic_commit.PNG" alt="commit-icon" className="repo-commit-icon" />
                 <span className="repo-commits">{repo.commits}회</span>
             </div>
             </div>
