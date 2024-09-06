@@ -6,6 +6,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: production
     
     steps:
     - name: Checkout code
@@ -17,7 +18,18 @@ jobs:
         node-version: '20'
         cache: npm
 
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        # 캐싱할 경로
+        path: '**/node_modules'
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.OS }}-build-
+          ${{ runner.OS }}-
+
     - name: Install dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
       run: npm install
 
     - name: Build React app
@@ -33,3 +45,7 @@ jobs:
     - name: Deploy to S3
       run: |
         aws s3 sync build/ s3://${{ secrets.FRONTEND_DEPLOY_S3_BUCKET }} --delete
+
+    - name: Invalidate CloudFront
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
