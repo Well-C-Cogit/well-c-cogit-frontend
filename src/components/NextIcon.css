@@ -1,0 +1,22 @@
+.next-icon-box {
+  width: 3.0em;
+  height: 3.0em;
+  position: absolute;
+  right: 1.5%;
+  top: 36%;
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.next-icon {
+  width: 1.8em;
+  height: auto;
+  color: #ccc;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+  

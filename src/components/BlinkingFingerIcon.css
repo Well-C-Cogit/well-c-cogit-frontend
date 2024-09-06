@@ -1,0 +1,28 @@
+.blinking-finger img {
+    width: 2.0em;
+    height: 2.0em;
+    animation: blink 1s linear 0s 10 forwards, disappear 1s ease-in 10s forwards;
+    position: absolute;
+    right: 8%;
+    top: 35%;
+    z-index: 10000;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.1;
+    }
+  }
+  
+  @keyframes disappear {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

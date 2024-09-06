@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from 'react-router-dom';
+import NextIcon from "./NextIcon";
 import "./Communities.css";
 
 function Communities() {  
@@ -155,6 +156,11 @@ function Communities() {
     setCurrentIndex(index);
   };
 
+  const handleNextClick = () => {
+    const newIndex = (currentIndex + 1) % myCommunities.length;
+    handleDotClick(newIndex);
+  };
+
   return (
     <div className="communities-container">
         <div className="my-communities-container">
@@ -178,6 +184,7 @@ function Communities() {
                 />
             ))}
             </div>
+            <NextIcon onClick={handleNextClick} />
             <div className="my-dots-container">
             {myCommunities.map((_, index) => (
                 <div
@@ -187,6 +194,7 @@ function Communities() {
                 ></div>
             ))}
             </div>
+            
         </div>
       
         <div className="communities-section">
@@ -229,7 +237,6 @@ function Communities() {
             />
             ))}
         </div>
-
     </div>
   );
 }
